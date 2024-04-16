@@ -38,8 +38,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://libzip.org/download/libzip-1.10.1.tar.xz",
-                    "sha256": "6d9ad40d2f9cd204c9e28c8a406e46289c0e887533c5174f4a38cf504fe1870e",
+                    "url": "https://github.com/nih-at/libzip/releases/download/v1.10.1/libzip-1.10.1.tar.gz",
+                    "sha256": "9669ae5dfe3ac5b3897536dc8466a874c8cf2c0e3b1fdd08d75b273884299363",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 10649,
@@ -223,7 +223,7 @@
                 "--with-php-config=/usr/lib/sdk/php83/bin/php-config"
             ],
             "post-install": [
-                "install -Dm755 modules/phpredis.so $(php -r 'echo ini_get(\"extension_dir\");')/phpredis.so",
+                "install -Dm755 modules/redis.so $(php -r 'echo ini_get(\"extension_dir\");')/redis.so",
                 "install -Dm644 phpredis.ini ${PHP_INI_DIR}/conf.d/phpredis.ini",
                 "install -Dm644 LICENSE ${FLATPAK_DEST}/share/licenses/phpredis/LICENSE"
             ],
