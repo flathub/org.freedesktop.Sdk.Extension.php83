@@ -217,6 +217,40 @@
             ]
         },
         {
+            "name": "phpredis",
+            "buildsystem": "autotools",
+            "config-opts": [
+                "--with-php-config=/usr/lib/sdk/php83/bin/php-config"
+            ],
+            "post-install": [
+                "install -Dm755 modules/phpredis.so $(php -r 'echo ini_get(\"extension_dir\");')/phpredis.so",
+                "install -Dm644 phpredis.ini ${PHP_INI_DIR}/conf.d/phpredis.ini",
+                "install -Dm644 LICENSE ${FLATPAK_DEST}/share/licenses/phpredis/LICENSE"
+            ],
+            "cleanup": [
+                "/include",
+                "*.a",
+                "*.la"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/phpredis/phpredis/archive/refs/tags/6.0.2.tar.gz",
+                    "sha256": "786944f1c7818cc7fd4289a0d0a42ea630a07ebfa6dfa9f70ba17323799fc430"
+                },
+                {
+                    "type": "file",
+                    "path": "files/phpredis/phpredis.ini"
+                },
+                {
+                    "type": "shell",
+                    "commands": [
+                        "${FLATPAK_DEST}/bin/phpize"
+                    ]
+                }
+            ]
+        },
+        {
             "name": "scripts",
             "buildsystem": "simple",
             "build-commands": [
