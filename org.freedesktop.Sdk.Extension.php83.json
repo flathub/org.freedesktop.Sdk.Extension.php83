@@ -224,7 +224,7 @@
             ],
             "post-install": [
                 "install -Dm755 modules/redis.so $(php -r 'echo ini_get(\"extension_dir\");')/redis.so",
-                "install -Dm644 phpredis.ini ${PHP_INI_DIR}/conf.d/phpredis.ini",
+                "install -Dm644 redis.ini ${PHP_INI_DIR}/conf.d/redis.ini",
                 "install -Dm644 LICENSE ${FLATPAK_DEST}/share/licenses/phpredis/LICENSE"
             ],
             "cleanup": [
@@ -240,7 +240,7 @@
                 },
                 {
                     "type": "file",
-                    "path": "files/phpredis/phpredis.ini"
+                    "path": "files/phpredis/redis.ini"
                 },
                 {
                     "type": "shell",
