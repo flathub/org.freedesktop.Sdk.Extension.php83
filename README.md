@@ -18,6 +18,7 @@ Includes
 * [PHIVE](https://phar.io/)
 * [apcu](https://pecl.php.net/package/APCu)
 * [xdebug](https://xdebug.org/)
+* [redis](https://github.com/phpredis/phpredis/)
 
 Each Flatpak can have its own custom php configuration files.
 e.g. for Visual Studio Code
@@ -26,6 +27,7 @@ e.g. for Visual Studio Code
 Global composer installs are limited to the Flatpak they were installed in.
 
 #### Troubleshooting
+
 `/usr/bin/env: ‘php’: No such file or directory`
 
 Run `. /usr/lib/sdk/php83/enable.sh` or add `/usr/lib/sdk/php83/bin` to your $PATH.
@@ -58,6 +60,7 @@ pdo_sqlite
 Phar
 posix
 random
+redis
 Reflection
 session
 SimpleXML
@@ -75,7 +78,9 @@ zlib
 [Zend Modules]
 Xdebug
 ```
+
 #### Build
+
 ```bash
 flatpak-builder --repo repo .build org.freedesktop.Sdk.Extension.php83.json --force-clean
 ```
