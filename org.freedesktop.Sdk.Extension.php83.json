@@ -159,8 +159,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://xdebug.org/files/xdebug-3.5.0.tgz",
-                    "sha256": "f6daf55a5c7adadb07dd2af25ff78b1cc9b1c58d6cc442a463eba015b678aabf",
+                    "url": "https://xdebug.org/files/xdebug-3.5.1.tgz",
+                    "sha256": "0f26849a5edf3d9120edc100219854599d54f923a8a4d1cb4fe4403520e49678",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 13302,
@@ -189,8 +189,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://getcomposer.org/download/2.9.4/composer.phar",
-                    "sha256": "d3eb5c4cb2e708267dac5f9a76d2a57b07836c7ea68783a1a02bd6d94753ea80",
+                    "url": "https://getcomposer.org/download/2.9.7/composer.phar",
+                    "sha256": "d3c6801ea6e5dd291d0f149295a4d0f1539a74d5231958fe8fdaa889a497e6cf",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 9710,
